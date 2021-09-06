@@ -17,7 +17,7 @@ export default class App extends Component {
                     <Route path='/boss' component={Boss} />
                     <Route path='/admin' component={Admin} />
                     <Route path='/guard' component={Guard} />
-                    <Redirect from="/" to="/login" />
+                    <Redirect from="/" to="/boss" />
                 </Switch>
             </BrowserRouter>
         )
