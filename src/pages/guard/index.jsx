@@ -30,7 +30,7 @@ export default class Guard extends Component {
                         <LeftNav list={menuData} />
                     </Sider>
                     <Layout className="site-layout">
-                        <HeaderTop collapsed={this.state.collapsed} toggle={() => { this.toggle() }} />
+                        <HeaderTop history={this.props.history} collapsed={this.state.collapsed} toggle={() => { this.toggle() }} />
                         <Content className="site-layout-content">
                             <Switch>
                                 <Route path='/guard/stall' component={GuardStall} />
