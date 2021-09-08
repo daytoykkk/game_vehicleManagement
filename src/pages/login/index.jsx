@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import './index.less';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { reqLogin } from '../../api'
 
 export default class Login extends Component {
 
-    handleLogin = (values) => {
-        console.log('数据: ', values);
-      };
+    handleLogin = async (values) => {
+        let res = await reqLogin(values)
+        sessionStorage.setItem('token', res.data.token);
+        message.success('登陆成功')
+        this.props.history.push('/boss')
+    };
 
     render() {
         return (
