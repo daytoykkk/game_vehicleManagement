@@ -4,6 +4,7 @@ import {
     reqCreateAreaAdmin,
     reqGetAreaPage,
     reqGetTime,
+    reqGetAreaAdmin,
 } from './bossApi'
 
 export {
@@ -14,4 +15,5 @@ export {
     reqCreateAreaAdmin,
     reqGetAreaPage,
     reqGetTime,
+    reqGetAreaAdmin,
 }

@@ -7,3 +7,5 @@ export const reqCreateAreaAdmin = (data) => ajax('/boss/createAreaAdmin', data, 
 export const reqGetAreaPage = (params) => ajax('/boss/getAreaPage', params, 'GET');
 
 export const reqGetTime = (data) => ajax('/boss/getAreaDayAmount', data, 'POST')
+
+export const reqGetAreaAdmin = (params) => ajax('/boss/getAreaAdmin', params, 'GET')

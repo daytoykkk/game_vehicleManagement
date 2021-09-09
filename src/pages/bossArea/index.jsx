@@ -33,9 +33,9 @@ export default class BossArea extends Component {
     //todo 搜索
     onSearch = async (value) => {
         // console.log(value)
-        let array = ["2021-09-08 0:0:0","2021-09-09 0:0:0","2021-09-06 0:0:0","2021-09-07 0:0:0","2021-09-10 0:0:0","2021-09-11 0:0:0"]
+        let array = ["2021-09-08 00:00:00","2021-09-09 00:00:00","2021-09-06 00:00:00","2021-09-07 00:00:00","2021-09-10 00:00:00","2021-09-11 00:00:00"]
         const data = {
-            arrayId: 1,
+            areaId: "1",
             dates:array
         }
         let res = await reqGetTime(data)
@@ -72,7 +72,8 @@ export default class BossArea extends Component {
 
     handleCancel = () => {
         this.setState({
-            visible: false
+            visible: false,
+            isLoading: false
         })
         message.info('取消添加。')
     }
@@ -142,7 +143,7 @@ export default class BossArea extends Component {
                 <Table
                     columns={bossAreaColumns}
                     dataSource={this.state.tableData}
-                    key={'areaId'}
+                    rowKey={columns => columns.arrayId} 
                     pagination={{
                         current: this.state.current,
                         total: this.state.total,
