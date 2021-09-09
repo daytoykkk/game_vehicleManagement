@@ -19,18 +19,18 @@ export default class BossAccount extends Component {
         adminList: []
     }
 
-    //todo 获取区域列表
-    // UNSAFE_componentWillMount = async () => {
-    //     return new Promise(async resolve=>{
-    //         let res = await reqGetAreaPage({ 'page': 1, 'size': 1000 });
-    //         let list = await reqGetAreaAdmin({ 'areaId': res.data.data[0].areaId })
-    //         this.setState({
-    //             areaList: res.data.data,
-    //             areaId: res.data.data[0].areaId,
-    //             adminList: list.data
-    //         })
-    //     })
-    // }
+    // 获取区域列表
+    UNSAFE_componentWillMount = async () => {
+        return new Promise(async resolve=>{
+            let res = await reqGetAreaPage({ 'page': 1, 'size': 1000 });
+            let list = await reqGetAreaAdmin({ 'areaId': res.data.data[0].areaId })
+            this.setState({
+                areaList: res.data.data,
+                areaId: res.data.data[0].areaId,
+                adminList: list.data
+            })
+        })
+    }
     getArea = async () => {
         let res = await reqGetAreaPage({ 'page': 1, 'size': 1000 });
         this.setState({
@@ -85,8 +85,6 @@ export default class BossAccount extends Component {
         })
         message.info('取消添加。')
     }
-
-    mockList = []
 
     render() {
 
@@ -160,7 +158,7 @@ export default class BossAccount extends Component {
                     </Modal>
                     <div className="adminBox">
                         {
-                            this.mockList.map((item,index) => {
+                            this.state.adminList.map((item,index) => {
                                 return <div className="adminItem" key={index}>
                                     <span className="adminSpan">管理员：{item.username}</span>
                                     <span style={{color: item.status===0?'#ff4e50':'#648cb9'}}>{item.status===0? '已冻结':'正常'}</span>
