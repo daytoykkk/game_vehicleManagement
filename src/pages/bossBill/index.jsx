@@ -6,7 +6,7 @@ import {
     reqGetAreaDayAmount,
     reqGetAreaPage
 } from '../../api/index'
-import { getSevenDay } from '../../config/bossConfig'
+import { getSevenDay } from '../../config/publicConfig'
 
 export default class BossBill extends Component {
 

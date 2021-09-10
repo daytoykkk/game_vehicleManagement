@@ -7,6 +7,14 @@ import {
     reqGetAreaAdmin,
 } from './bossApi'
 
+import {
+    reqCreatePark,
+    reqCreateParkAdmin,
+    reqGetParkAdmin,
+    reqGetAreaParkPage,
+    reqGetParkDayAmount,
+} from './adminApi'
+
 export {
     // 登陆
     reqLogin,
@@ -16,4 +24,10 @@ export {
     reqGetAreaPage,
     reqGetAreaDayAmount,
     reqGetAreaAdmin,
+    // admin
+    reqCreatePark,
+    reqCreateParkAdmin,
+    reqGetParkAdmin,
+    reqGetAreaParkPage,
+    reqGetParkDayAmount,
 }

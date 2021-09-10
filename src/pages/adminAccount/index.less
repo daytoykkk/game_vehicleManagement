@@ -1,0 +1,65 @@
+.adminAccount {
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+
+    .itemBox {
+        width: 45%;
+        height: calc(100vh - 160px);
+    }
+
+    .leftBox {
+        overflow: auto;
+
+        .areaItem {
+            background-color: #ebf4fa;
+            border-radius: 10px;
+            height: 66px;
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .areaItemClick {
+            background-color: #648cb9;
+            color: white;
+        }
+    }
+
+    .rightBox {
+        padding: 0px 20px;
+
+        .addBtn {
+            width: 100%;
+        }
+
+        .guardBox {
+            width: 100%;
+            height: calc(100vh - 204px);
+            margin-top: 12px;
+            padding: 20px 0;
+            overflow: auto;
+
+            .guardItem {
+                height: 40px;
+                background-color: #ebf4fa;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                padding: 10px 20px;
+                font-size: 14px;
+                line-height: 14px;
+                display: flex;
+                justify-content: space-between;
+
+                .guardSpan{
+                    width: 60%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
