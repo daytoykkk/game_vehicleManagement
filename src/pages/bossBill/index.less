@@ -1,0 +1,54 @@
+.bossBill {
+    width: 100%;
+    height: calc(100vh - 160px);
+
+    .topBox {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 60px;
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #464646;
+        }
+
+        .areaBox {
+            height: 80px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            .areaItem {
+                background-color: #ebf4fa;
+                width: 16%;
+                height: 80px;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 12px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+
+                span {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                }
+            }
+
+            .areaItemClick {
+                background-color: #648cb9;
+                color: white;
+            }
+        }
+
+        .pagination {
+            float: right;
+            margin-top: 20px;
+        }
+    }
+    
+   
+}
