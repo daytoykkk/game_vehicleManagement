@@ -10,7 +10,7 @@ export default class Login extends Component {
         let res = await reqLogin(values)
         sessionStorage.setItem('token', res.data.token);
         message.success('登陆成功')
-        this.props.history.push('/boss')
+        this.props.history.push('/admin')
     };
 
     render() {

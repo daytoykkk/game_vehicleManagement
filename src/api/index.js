@@ -3,7 +3,7 @@ import {
     reqCreateArea,
     reqCreateAreaAdmin,
     reqGetAreaPage,
-    reqGetTime,
+    reqGetAreaDayAmount,
     reqGetAreaAdmin,
 } from './bossApi'
 
@@ -14,6 +14,6 @@ export {
     reqCreateArea,
     reqCreateAreaAdmin,
     reqGetAreaPage,
-    reqGetTime,
+    reqGetAreaDayAmount,
     reqGetAreaAdmin,
 }

@@ -5,7 +5,6 @@ import { PlusOutlined } from '@ant-design/icons';
 import {
     reqCreateArea,
     reqGetAreaPage,
-    reqGetTime,
 } from '../../api/index'
 
 import { bossAreaColumns } from '../../config/bossConfig'
@@ -30,16 +29,17 @@ export default class BossArea extends Component {
         
     }
 
+    //todo 解决bug的 不需要就删掉
+    componentWillUnmount = () => {
+        this.setState = (state, callback) => {
+            return;
+        }
+    }
+
     //todo 搜索
     onSearch = async (value) => {
         // console.log(value)
-        let array = ["2021-09-08 00:00:00","2021-09-09 00:00:00","2021-09-06 00:00:00","2021-09-07 00:00:00","2021-09-10 00:00:00","2021-09-11 00:00:00"]
-        const data = {
-            areaId: "1",
-            dates:array
-        }
-        let res = await reqGetTime(data)
-        console.log(JSON.stringify(res))
+       
     }
 
     // 添加区域

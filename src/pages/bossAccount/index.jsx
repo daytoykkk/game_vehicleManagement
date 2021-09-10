@@ -31,26 +31,22 @@ export default class BossAccount extends Component {
             })
         })
     }
-    getArea = async () => {
-        let res = await reqGetAreaPage({ 'page': 1, 'size': 1000 });
-        this.setState({
-            areaList: res.data.data,
-            areaId: res.data.data[0].areaId
-        })
-    }
-
+   
     // 获取区域管理员
     getAreaAdmin = async () => {
         let res = await reqGetAreaAdmin({ 'areaId': this.state.areaId })
-        console.log(JSON.stringify(res))
+        this.setState({
+            adminList: res.data
+        })
     }
 
     // 选择区域
     handleChangeArea = (item) => {
         this.setState({
             areaId:item.areaId
+        }, () => {
+            this.getAreaAdmin()
         })
-        this.getAreaAdmin()
     }
 
     // 添加区域管理员
@@ -87,13 +83,6 @@ export default class BossAccount extends Component {
     }
 
     render() {
-
-        for(let i=0;i<20;i++) {
-            this.mockList.push({
-                username: "hhhhhhhhhhhhhhhh" + i,
-                status: i%2
-            })
-        }
 
         return (
             <div className="bossAccount">
