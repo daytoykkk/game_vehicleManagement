@@ -68,14 +68,6 @@ const adminParkColumns = [
         ellipsis: true,
     },
     {
-        title: '车位数',
-        dataIndex: 'placeNum',
-        key: 'placeNum',
-        width: '100px',
-        align: 'center',
-        ellipsis: true,
-    },
-    {
         title: '状态',
         dataIndex: 'status',
         key: 'status',

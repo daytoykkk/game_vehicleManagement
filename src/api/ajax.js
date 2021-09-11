@@ -32,7 +32,7 @@ export default function ajax(url, data = {}, method = 'GET',responceType='',cont
 
         // PUT
         if(method === 'PUT') {
-            promise = axios.put(url,data,{
+            promise = axios.put(url,null,{
                 headers: {
                     "token": token
                 }

@@ -9,8 +9,10 @@ export default class Login extends Component {
     handleLogin = async (values) => {
         let res = await reqLogin(values)
         sessionStorage.setItem('token', res.data.token);
-        message.success('登陆成功')
-        this.props.history.push('/admin')
+        if(res.code===1) {message.success('登陆成功');this.props.history.push('/boss')}
+        else if(res.code===2) {message.success('登陆成功');this.props.history.push('/admin')}
+        else if(res.code===3) {message.success('登陆成功');this.props.history.push('/guard')}
+        else message.warn(res.msg)
     };
 
     render() {

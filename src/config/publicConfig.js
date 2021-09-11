@@ -29,4 +29,5 @@ const getDay = (day) => {
 
 export {
     getSevenDay,
+    getDay
 }

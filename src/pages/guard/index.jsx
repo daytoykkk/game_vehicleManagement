@@ -35,7 +35,7 @@ export default class Guard extends Component {
                             <Switch>
                                 <Route path='/guard/stall' component={GuardStall} />
                                 <Route path='/guard/log' component={GuardLog} />
-                                <Redirect from="/guard" to="/guard/stall" />
+                                <Redirect from="/guard" to="/guard/log" />
                             </Switch>
                         </Content>
                     </Layout>

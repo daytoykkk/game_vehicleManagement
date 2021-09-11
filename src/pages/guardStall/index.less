@@ -1,0 +1,41 @@
+.guardStall {
+
+    .topBox {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottomBox {
+        height: calc(100vh - 210px);
+        margin-top: 20px;
+
+        .listBox {
+            height: calc(100vh - 260px);
+            display: flex;
+            flex-wrap: wrap;
+
+            .itemBox {
+                background-color: #ebf4fa;
+                width: 18%;
+                margin-right: 2%;
+                height: 46%;
+                border-radius: 10px;
+                padding: 20px;
+
+                p {
+                    color: #648cb9;
+                    font-size: 16px;
+                    line-height: 20px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+
+        .pagination {
+            float: right;
+            margin-top: 18px;
+        }
+    }
+}

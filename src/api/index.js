@@ -15,6 +15,14 @@ import {
     reqGetParkDayAmount,
 } from './adminApi'
 
+import {
+    reqFreezePark,
+    reqUnfreezePark,
+    reqCreatePlace,
+    reqGetPlacePage,
+    reqGetDayRecords,
+} from './guardApi'
+
 export {
     // 登陆
     reqLogin,
@@ -30,4 +38,10 @@ export {
     reqGetParkAdmin,
     reqGetAreaParkPage,
     reqGetParkDayAmount,
+    // guard
+    reqFreezePark,
+    reqUnfreezePark,
+    reqCreatePlace,
+    reqGetPlacePage,
+    reqGetDayRecords,
 }

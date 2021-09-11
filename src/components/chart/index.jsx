@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactEcharts from 'echarts-for-react';
-import echarts from 'echarts';
+// import echarts from 'echarts';
 
 export default class Chart extends Component {
 
