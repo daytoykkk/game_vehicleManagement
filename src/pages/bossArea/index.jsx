@@ -143,7 +143,7 @@ export default class BossArea extends Component {
                 <Table
                     columns={bossAreaColumns}
                     dataSource={this.state.tableData}
-                    rowKey={columns => columns.arrayId} 
+                    rowKey={(record) => record.areaId} 
                     pagination={{
                         current: this.state.current,
                         total: this.state.total,
