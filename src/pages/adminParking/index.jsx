@@ -85,9 +85,13 @@ export default class AdminParking extends Component {
             size: pageSize
         }
         let res = await reqGetAreaParkPage(data);
+        let list = res.data.data
+        list.forEach(item => {
+            item.status = item.status===1? '正常':'维修中'
+        })
         this.setState({
             current: page,
-            tableData: res.data.data,
+            tableData: list,
             total: res.data.total
         })
     }
@@ -141,6 +145,13 @@ export default class AdminParking extends Component {
                                 rules={[{ required: true, message: '请输入纬度称！' }]}
                             >
                                 <Input />
+                            </Form.Item>
+                            <Form.Item
+                                label="计费标准"
+                                name="charge"
+                                rules={[{ required: true, message: '请输入计费标准！' }]}
+                            >
+                                <Input prefix="￥" suffix="元/小时" />
                             </Form.Item>
 
                             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>

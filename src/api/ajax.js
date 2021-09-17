@@ -55,7 +55,6 @@ export default function ajax(url, data = {}, method = 'GET', responceType = '', 
         }
 
         promise.then(res => {
-            console.log(res);
             if (res.data.code === '-1') {
                 message.warn('请先重新登陆！')
                 window.location.href = baseUrl + '/index.html'
