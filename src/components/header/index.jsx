@@ -26,6 +26,7 @@ export default class HeaderTop extends Component {
             cancelText: '取消',
             onOk: () => {
                 this.props.history.push('/login')
+                sessionStorage.removeItem('token')
                 Message.success('登出成功！')
             },
             onCancel() {

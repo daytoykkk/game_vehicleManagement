@@ -10,6 +10,10 @@ export const reqGetPlacePage = (params) => ajax('/park/getPlacePage', params, 'G
 
 export const reqGetDayRecords = (data) => ajax('/park/getDayRecords', data, 'POST');
 
+export const resGetComplaint = (params) => ajax('/park/getComplaint', params, 'GET');
+
+export const resHandleComplaint = (id) => ajax('/park/handleComplaint', id, 'PUT')
+
 
 
 

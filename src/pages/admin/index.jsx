@@ -8,6 +8,7 @@ import AdminParking from '../adminParking';
 import AdminAccount from '../adminAccount';
 import AdminBill from '../adminBill';
 import { menuData } from '../../config/adminConfig';
+import { handleInitWs } from '../../api/ws.js'
 
 const { Sider, Content } = Layout;
 
@@ -16,6 +17,10 @@ export default class Admin extends Component {
     state = {
         collapsed: false,
     };
+
+    UNSAFE_componentWillMount = () => {
+        handleInitWs()
+    }
 
     toggle = () => {
         this.setState({
@@ -28,22 +33,22 @@ export default class Admin extends Component {
     render() {
         return (
             <div className="adminMain">
-                 <Layout className="bossMain">
-                <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-                    <LeftNav list={menuData}/>
-                </Sider>
-                <Layout className="site-layout">
-                    <HeaderTop history={this.props.history} collapsed={this.state.collapsed} toggle={() => {this.toggle()}} />
-                    <Content className="site-layout-content">
-                        <Switch>
-                            <Route path='/admin/parking' component={AdminParking} />
-                            <Route path='/admin/account' component={AdminAccount} />
-                            <Route path='/admin/bill' component={AdminBill} />
-                            <Redirect from="/admin" to="/admin/parking" />
-                        </Switch>
-                    </Content>
+                <Layout className="bossMain">
+                    <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+                        <LeftNav list={menuData} />
+                    </Sider>
+                    <Layout className="site-layout">
+                        <HeaderTop history={this.props.history} collapsed={this.state.collapsed} toggle={() => { this.toggle() }} />
+                        <Content className="site-layout-content">
+                            <Switch>
+                                <Route path='/admin/parking' component={AdminParking} />
+                                <Route path='/admin/account' component={AdminAccount} />
+                                <Route path='/admin/bill' component={AdminBill} />
+                                <Redirect from="/admin" to="/admin/parking" />
+                            </Switch>
+                        </Content>
+                    </Layout>
                 </Layout>
-            </Layout>
             </div>
         )
     }

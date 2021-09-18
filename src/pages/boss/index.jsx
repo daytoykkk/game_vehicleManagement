@@ -8,6 +8,7 @@ import BossArea from '../bossArea';
 import BossAccount from '../bossAccount';
 import BossBill from '../bossBill'
 import { menuData } from '../../config/bossConfig';
+import { handleInitWs } from '../../api/ws.js'
 
 const { Sider, Content } = Layout;
 
@@ -16,6 +17,10 @@ export default class Boss extends Component {
     state = {
         collapsed: false,
     };
+
+    UNSAFE_componentWillMount = () => {
+        handleInitWs()
+    }
 
     toggle = () => {
         this.setState({

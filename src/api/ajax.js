@@ -44,7 +44,7 @@ export default function ajax(url, data = {}, method = 'GET', responceType = '', 
 
         // PUT
         if (method === 'PUT') {
-            promise = axios.put(url, null)
+            promise = axios.put(url, data)
         }
 
         // DELETE 

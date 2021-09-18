@@ -21,6 +21,8 @@ import {
     reqCreatePlace,
     reqGetPlacePage,
     reqGetDayRecords,
+    resGetComplaint,
+    resHandleComplaint,
 } from './guardApi'
 
 export {
@@ -44,4 +46,6 @@ export {
     reqCreatePlace,
     reqGetPlacePage,
     reqGetDayRecords,
+    resGetComplaint,
+    resHandleComplaint,
 }
