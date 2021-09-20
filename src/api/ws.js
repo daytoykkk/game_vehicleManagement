@@ -1,6 +1,6 @@
 import { message } from 'antd';
 let ws = null
-let url = "ws://z3773e6368.qicp.vip/socket/"
+let url = "ws://47.106.84.138:8996/socket/"
 let connectRetryCount = 0
 
 
@@ -21,7 +21,7 @@ export const handleInitWs = () => {
             }, 500 * connectRetryCount);
         };
         ws.onmessage = (res) => {
-            message.success(res.data)
+            message.success(JSON.parse(res.data).message)
         };
     }
 
