@@ -7,6 +7,7 @@ import HeaderTop from '../../components/header';
 import GuardStall from '../guardStall';
 import GuardLog from '../guardLog';
 import GuardComplaint from '../guardComplaint';
+import GuardPic from '../guardPic'
 import { menuData } from '../../config/guardConfig';
 import { handleInitWs } from '../../api/ws.js'
 
@@ -44,6 +45,7 @@ export default class Guard extends Component {
                                 <Route path='/guard/stall' component={GuardStall} />
                                 <Route path='/guard/log' component={GuardLog} />
                                 <Route path='/guard/complaint' component={GuardComplaint} />
+                                <Route path='/guard/parks' component={GuardPic} />
                                 <Redirect from="/guard" to="/guard/stall" />
                             </Switch>
                         </Content>

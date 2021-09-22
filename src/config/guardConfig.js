@@ -27,6 +27,12 @@ const menuData = [
         name: "用户反馈",
         path: '/guard/complaint'
     },
+    {
+        key: 4,
+        icon: <CarOutlined />,
+        name: "车位实况",
+        path: '/guard/parks'
+    },
 ]
 
 const guardLogColumns = [
